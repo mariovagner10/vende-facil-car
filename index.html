@@ -126,6 +126,28 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombreamento no texto */
         }
 
+        .statistics {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            color: white;
+        }
+
+        .stat-item {
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .stat-item .number {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .stat-item .description {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
         footer {
             text-align: center;
             padding: 10px;
@@ -140,6 +162,19 @@
         <!-- Logo centralizado no topo -->
         <img src="logo.png" alt="Logo Vende Fácil Car"> <!-- Substitua "logo.png" pela URL da sua logo -->
         <h1>A forma mais segura e rápida de vender seu carro!</h1>
+
+        <!-- Estatísticas -->
+        <div class="statistics">
+            <div class="stat-item">
+                <div class="number" id="carsCount">0</div>
+                <div class="description">Número médio de carros cadastrados</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">+900</div>
+                <div class="description">Revendas qualificadas querendo comprar o seu carro!</div>
+            </div>
+        </div>
+
         <a href="https://api.whatsapp.com/send?phone=555199246396&text=Quero%20vender%20meu%20carro!" class="btn white-text">📱 Cadastre Agora</a>
     </header>
 
@@ -178,5 +213,25 @@
         <p>© 2025 Vende Fácil Car. Todos os direitos reservados.</p>
     </footer>
 
+    <script>
+        // Função para contagem crescente
+        function animateCount(elementId, targetNumber, duration) {
+            const element = document.getElementById(elementId);
+            const start = 0;
+            const increment = targetNumber / (duration / 50); // Calcula o incremento
+            let current = start;
+            const interval = setInterval(() => {
+                current += increment;
+                if (current >= targetNumber) {
+                    current = targetNumber; // Garante que o número final seja exato
+                    clearInterval(interval);
+                }
+                element.textContent = Math.floor(current); // Atualiza o número no DOM
+            }, 50);
+        }
+
+        // Inicia a contagem crescente
+        animateCount('carsCount', 500, 3000); // Alvo: 500, duração: 3000ms
+    </script>
 </body>
 </html>
