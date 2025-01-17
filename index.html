@@ -5,29 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vende Fácil Car</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #262424; /* Cor de fundo cinza escuro */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #262424;
+            position: relative;
+        }
+
+        header img {
+            max-width: 200px; /* Ajuste o tamanho conforme necessário */
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        #benefits {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #benefits h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #benefits li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        #cta {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: black; 
+        }
+
+        #cta h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        #cta p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: rgb(27, 27, 27);
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .image-section {
+            position: relative;
+            height: 50vh; /* Reduzido para 50% da altura da tela */
+            overflow: hidden;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute; /* Garante que a imagem fique atrás do texto */
+            top: 0;
+            left: 0;
+            z-index: -1; /* Coloca a imagem atrás do texto */
+        }
+
+        .image-section .overlay {
+            position: absolute;
+            top: 50%; /* Centraliza verticalmente */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translate(-50%, -50%); /* Ajusta o texto para o centro exato */
+            text-align: center;
+            color: white; /* Cor do texto */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombreamento no texto */
+            z-index: 1; /* Coloca o texto sobre a imagem */
+        }
+
+        .image-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            -webkit-text-stroke: 1px black; /* Contorno preto para navegadores Webkit */
+            color: white; /* Cor principal do texto */
+        }
+
+        .image-section p {
+            font-size: 1.2em;
+            color: white; /* Cor principal do texto */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombreamento no texto */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>🚗 Vende Fácil Car</h1>
-        <p>A forma mais segura e rápida de vender seu carro!</p>
+        <!-- Logo centralizado no topo -->
+        <img src="logo.png" alt="Logo Vende Fácil Car"> <!-- Substitua "logo.png" pela URL da sua logo -->
+        <h1>A forma mais segura e rápida de vender seu carro!</h1>
+        <p></p>
     </header>
+
+    <!-- Imagens com textos abaixo -->
+    <div class="image-section">
+        <img src="2.png" alt="Imagem 1">
+        <div class="overlay">
+            <h2>Venda Rápida e Segura!</h2>
+            <p>Oferecendo seu veículo apenas para revendas confiáveis!</p>
+        </div>
+    </div>
+    <div class="image-section">
+        <img src="4.jpg" alt="Imagem 2">
+        <div class="overlay">
+            <h2>Preço Justo Pelo Seu Veículo!</h2>
+        </div>
+    </div>
+
     <main>
         <section id="benefits">
             <h2>Por que escolher a Vende Fácil Car?</h2>
             <ul>
                 <li>🔒 Segurança total: sem golpes!</li>
-                <li>🚀 Venda rápida para revendas confiáveis!</li>
+                <li>🚀 Venda rápida oferecendo seu veículo apenas para revendas confiáveis!</li>
                 <li>💰 Preço justo pelo seu veículo!</li>
             </ul>
         </section>
         <section id="cta">
-            <h2>Cadastre GRÁTIS seu carro agora mesmo!</h2>
+            <h2>Cadastre seu carro agora mesmo!</h2>
             <p>Basta clicar no botão abaixo para começar:</p>
             <a href="https://api.whatsapp.com/send?phone=555199246396&text=Quero%20vender%20meu%20carro!" class="btn">📱 Cadastre Agora</a>
         </section>
     </main>
+
     <footer>
         <p>© 2025 Vende Fácil Car. Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>
