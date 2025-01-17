@@ -45,6 +45,10 @@ section {
     border-radius: 5px;
     font-size: 18px;
 }
+.white-text {
+    color: white !important;
+}
+
 
 .btn:hover {
     background-color: #218838;
